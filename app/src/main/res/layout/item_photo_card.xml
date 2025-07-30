@@ -1,23 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clipToPadding="false">
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true">
 
-    <androidx.cardview.widget.CardView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardCornerRadius="16dp"
-        app:cardUseCompatPadding="true">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/photo_image_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher" />
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
 
-    </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/keep_overlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:alpha="0"
+            android:background="@drawable/label_background_keep"
+            android:padding="8dp"
+            android:rotation="-30"
+            android:text="KEEP"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="32sp"
+            android:textStyle="bold" />
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/sweep_overlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="40dp"
+            android:alpha="0"
+            android:background="@drawable/label_background_sweep"
+            android:padding="8dp"
+            android:rotation="30"
+            android:text="SWEEP"
+            android:textColor="@color/design_default_color_error"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>
