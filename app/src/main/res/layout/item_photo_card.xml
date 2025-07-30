@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher" />  <!-- Usamos el icono de la app como imagen temporal -->
+            android:src="@mipmap/ic_launcher" />
 
     </androidx.cardview.widget.CardView>
 

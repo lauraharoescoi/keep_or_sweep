@@ -7,7 +7,4 @@
     android:clipChildren="false"
     android:padding="32dp"
     tools:context=".MainActivity">
-
-    <!-- Aquí añadiremos las tarjetas de fotos con código Kotlin -->
-
 </FrameLayout>
